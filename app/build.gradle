@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION as String
+    defaultConfig {
+        applicationId "com.xwang.accountbook"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode APP_VERSION_CODE as int
+        versionName APP_VERSION_NAME as String
+
+
+    }
+    lintOptions {
+        disable "ResourceType"
+    }
+    signingConfigs {
+        key_config {
+            storeFile file(STORE_FILE_PATH as String)
+            storePassword "95579.com"
+            keyAlias 'cjzq3.keystore'
+            keyPassword '95579.com'
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            signingConfig signingConfigs.key_config
+            minifyEnabled false
+            zipAlignEnabled true
+            //Remove unused resource
+            shrinkResources true
+            manifestPlaceholders = [ IS_TEST_VALUE:DEBUG_TEST as String,DEBUGABLE_VALUE:"true",SELECT_SITE_VALUE:"false"]
+        }
+        release {
+            debuggable false
+            signingConfig signingConfigs.key_config
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources false //Remove unused resource
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [ IS_TEST_VALUE:"false",DEBUGABLE_VALUE:"false",SELECT_SITE_VALUE:"false"]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
+    compile 'com.android.support:appcompat-v7:23.1.1'
+
+    compile 'com.android.support:support-annotations:23.0.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.4'
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+}

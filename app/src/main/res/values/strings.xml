@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">AccountBook</string>
+    <string name="xwang">xwang</string>
+    <string name="action_settings">Preference</string>
+    <string name="settings_settings">General Settings</string>
+    <string name="settings_others">Others</string>
+    <string name="settings_others_about">About Me</string>
+    <string name="network_error">Network Error！</string>
+    <string name="searching">Searching</string>
+    <string name="display_format">EEE, MMM d</string>
+    <string name="title_activity_about" translatable="false">AboutActivity</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="bxbxbai">bxbxbai</string>
+    <string name="comment_count">%d comments</string>
+    <string name="all_people">All People</string>
+    <string name="days_ago">%d days ago</string>
+    <string name="follower">%d flowers</string>
+    <string name="post_count" translatable="false">%d 文</string>
+    <string name="user_count">%d专栏</string>
+    <string name="like_count">%d Likes</string>
+    <string name="origin_web_page">Origin Web Page</string>
+    <string name="recent_news">Article of last week</string>
+    <string name="type_here">type here</string>
+    <string name="clear_input">clear input</string>
+    <string name="post_name_time">%1$s ● %2$s </string>
+    <string name="post_like_comment_count">%1$s赞 ● %2$s条评论</string>
+</resources>

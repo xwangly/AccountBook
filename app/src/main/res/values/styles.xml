@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension" />
+        <attr name="ci_height" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_animator" format="reference" />
+        <attr name="ci_animator_reverse" format="reference" />
+        <attr name="ci_drawable" format="reference" />
+        <attr name="ci_drawable_unselected" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="LabelView">
+        <attr name="tl_textColor" format="color" />
+        <attr name="tl_textSize" format="dimension" />
+        <attr name="tl_textWordMargin" format="dimension" />
+        <attr name="tl_textLineMargin" format="dimension" />
+        <attr name="tl_textBackground" format="reference" />
+        <attr name="tl_textPaddingLeft" format="dimension" />
+        <attr name="tl_textPaddingRight" format="dimension" />
+        <attr name="tl_textPaddingTop" format="dimension" />
+        <attr name="tl_textPaddingBottom" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="LiTextView">
+        <attr name="li_drawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RatioNetworkImageView">
+        <attr name="ratio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="TagView">
+        <attr name="tagBackground" format="color" />
+        <attr name="tagText" format="string" />
+        <attr name="tagTextSize" format="dimension" />
+        <attr name="tagTextColor" format="color" />
+        <attr name="tagAngel" format="integer" />
+        <attr name="tagPosition" format="enum">
+            <enum name="topLeft" value="0" />
+            <enum name="topRight" value="1" />
+            <enum name="bottomLeft" value="2" />
+            <enum name="bottomRight" value="3" />
+        </attr>
+    </declare-styleable>
+
+</resources>
